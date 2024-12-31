@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutlu Yıllar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+        }
+        #password-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        #password-screen input {
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #password-screen button {
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #password-screen button:hover {
+            background-color: #2980b9;
+        }
+        header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        section.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        section.gallery img {
+            max-width: 300px;
+            border: 3px solid white;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        section.gallery img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="password-screen">
+        <input type="password" id="password" placeholder="Şifrenizi girin">
+        <button onclick="checkPassword()">Giriş</button>
+    </div>
+
+    <header>
+        <h1>Mutlu Yıllar!</h1>
+        <p>Sevgili [Kız Arkadaşının İsmi], bu özel yıl için seninle paylaşmak istediklerim var!</p>
+    </header>
+
+    <section class="gallery">
+        <!-- Fotoğrafları buraya ekle -->
+        <img src="photo1.jpg" alt="Fotoğraf 1">
+        <img src="photo2.jpg" alt="Fotoğraf 2">
+        <img src="photo3.jpg" alt="Fotoğraf 3">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sevgiyle Hazırlandı</p>
+    </footer>
+
+    <script>
+        function checkPassword() {
+            const correctPassword = "2024"; // Şifreyi buraya yaz
+            const inputPassword = document.getElementById("password").value;
+            if (inputPassword === correctPassword) {
+                document.getElementById("password-screen").style.display = "none";
+            } else {
+                alert("Yanlış şifre. Lütfen tekrar deneyin.");
+            }
+        }
+    </script>
+</body>
+</html>
